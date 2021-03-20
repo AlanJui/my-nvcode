@@ -42,6 +42,7 @@ source ~/.config/my-nvim/config/float-term.vim
 source ~/.config/my-nvim/config/echodoc.vim
 source ~/.config/my-nvim/config/plantuml-previewer.vim
 source ~/.config/my-nvim/config/find-and-replace.vim
+source ~/.config/my-nvim/config/instant-markdown.vim
 
 "===========================================================
 " Vim 通用設定

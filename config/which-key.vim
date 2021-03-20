@@ -322,10 +322,12 @@ let g:which_key_map.u = {
       \ 'M' : [':MarkdownPreviewStop'                           , 'stop markdown preview'],
       \ 'u' : [':PlantumlOpen'                                  , 'start plant-uml preview'],
       \ 'U' : [':PlantumlSave docs/diagrams/out png'            , 'export plant-uml diagram'],
-      \ 'v' : [':FloatermNew --wintype=split --height=0.2 --autoclose=2 vuepress dev docs'   , 'docs:dev'],
-      \ 'V' : [':FloatermNew --wintype=split --height=0.1 --autoclose=2 live-server docs/.vuepress/dist/' , 'docs:dist'],
-      \ 'b' : [':FloatermNew --wintype=split --height=0.1 --autoclose=2 vuepress build docs' , 'docs:build'],
+      \ 'v' : [':FloatermNew --wintype=split --height=0.2 --autoclose=2 yarn editing' , 'editing docs'],
+      \ 'B' : [':FloatermNew --wintype=split --height=0.1 --autoclose=2 yarn build'   , 'build docs'],
+      \ 'V' : [':FloatermNew --wintype=split --height=0.1 --autoclose=2 yarn review'  , 'review docs'],
+      \ 'R' : [':FloatermNew --wintype=split --height=0.1 --autoclose=2 yarn release' , 'release docs'],
       \ }
+      " \ 'V' : [':FloatermNew --wintype=split --height=0.1 --autoclose=2 live-server docs/.vuepress/dist' , 'docs:dist'],
 
 " w is for wiki
 " let g:which_key_map.w = {
