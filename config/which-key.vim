@@ -49,6 +49,7 @@ let g:which_key_map['/'] = [ ':call Comment()'                                 ,
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'file explorer' ]
+let g:which_key_map['E'] = [ ':FloatermNew vifm'                               , 'ViFm file explorer' ]
 let g:which_key_map['f'] = [ ':Ranger'                                         , 'external file explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
@@ -65,6 +66,7 @@ let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'               ,
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
+      \ 'l' : [':set wrap!'              , 'on/off line wrap'],
       \ 'n' : [':set nonumber!'          , 'on/off line-numbers'],
       \ 'N' : [':set norelativenumber!'  , 'on/off relative line-numbers'],
       \ 's' : [':s/\%V\(.*\)\%V/"\1"/'   , 'surround'],
@@ -295,6 +297,7 @@ let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'F' : [':FloatermNew vifm'                              , 'vifm'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew django-admin shell'                , 'django-admin'],
       \ 'D' : [':FloatermNew lazydocker'                        , 'docker'],
