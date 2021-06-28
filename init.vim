@@ -23,6 +23,17 @@ let g:loaded_perl_provider = 0
 "===========================================================
 " 擴充套件(Plugins)
 "===========================================================
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
+if exists('g:vscode')
+    " VSCode extension
+else
+    " Neovim Plugins
+endif
+
 " 需安裝之擴充套件
 source ~/.config/my-nvim/plugins.vim
 
@@ -118,3 +129,4 @@ set exrc
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile

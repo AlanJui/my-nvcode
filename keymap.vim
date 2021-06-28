@@ -7,24 +7,6 @@ let mapleader = ","
 "======================================================================
 
 "--------------------------------------------------------------
-" 設定檔作業
-
-" 編輯設定檔
-nmap <Leader>ci :e ~/.vim/vimrc<CR>
-nmap <Leader>cg :e ~/.vim/global.vim<CR>
-nmap <Leader>cf :e ~/.vim/format.vim<CR>
-nmap <Leader>ck :e ~/.vim/keymap.vim<CR>
-nmap <Leader>cp :e ~/.vim/plugins.vim<CR>
-nmap <Leader>cv :e ~/.vim/coc-nvim.vim<CR>
-nmap <Leader>cj :e ~/.vim/coc-settings.json<CR>
-nmap <Leader>cI :source ~/.vim/init.vim<CR>
-
-" 依據設定檔重啟設定
-nmap <Leader>i :e ~/.vim/vimrc<CR>
-nmap <Leader>I :source ~/.vim/vimrc<CR>
-
-
-"--------------------------------------------------------------
 " 視窗操作
 
 " 切割視窗指令：
@@ -39,11 +21,11 @@ nnoremap <Leader>w\| <C-W>v		" 遊標所在視窗做垂直切割
 
 " 調整視窗的寬度／高度
 " 指令：resize (res)
-" 水平調整格式： 
+" 水平調整格式：
 "  (1) :res 60
 "  (2) :res +5
 "  (3) :res -5
-" 垂直調整格式： 
+" 垂直調整格式：
 "  (1) :vertical res 60
 "  (2) :vertical res +5
 "  (3) :vertical res -5
@@ -73,10 +55,18 @@ nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 " 在視窗間移動游標
 nnoremap <Leader>ww <C-W>w 		" 遊標移至下一個視窗
 nnoremap <Leader>wc <C-W>c      " 關閉遊標所在視窗
+
 nnoremap <Leader>wj <C-W>j 		" 遊標移至垂直下方的視窗
+nnoremap <C-j>      <C-W>j 		" 遊標移至垂直下方的視窗
+
 nnoremap <Leader>wk <C-W>k 		" 遊標移至垂直上方的視窗
+nnoremap <C-k>      <C-W>k 		" 遊標移至垂直上方的視窗
+
 nnoremap <Leader>wh <C-W>h		" 遊標移至水平左方的視窗
+nnoremap <C-h>      <C-W>h		" 遊標移至水平左方的視窗
+
 nnoremap <Leader>wl <C-W>l		" 遊標移至水平右方的視窗
+nnoremap <C-l>      <C-W>l		" 遊標移至水平右方的視窗
 
 
 " window Zoom-in/Zoon-out
@@ -218,8 +208,8 @@ cmap w!! w !sudo tee %
 
 
 " 退出 Vim
-noremap <C-q> :quit<CR>  
-noremap <C-Q> :qa!<CR>   
+noremap <C-q> :quit<CR>
+noremap <C-Q> :qa!<CR>
 
 
 " === Search shorcuts === "

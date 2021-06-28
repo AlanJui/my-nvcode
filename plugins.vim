@@ -18,6 +18,15 @@ endif
 
 call plug#begin('~/.config/my-nvim/plugged')
 
+" To conditionally activate plugins, vim-plug has a few solutions. For example,
+" using the Cond helper, you can conditionally activate installed plugins
+
+" inside plug#begin:
+" use normal easymotion when in vim mode
+Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+" use vscode easymotion when in vscode mode
+Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+
 "------------------------------------------------------------
 " 編輯
 
