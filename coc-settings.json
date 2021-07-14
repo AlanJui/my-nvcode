@@ -29,6 +29,7 @@
     "html",
     "htmldjango",
     "django-html",
+    "html",
     "css",
     "javascript",
     "javascriptreact",

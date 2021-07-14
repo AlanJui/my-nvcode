@@ -75,9 +75,8 @@ nmap <Leader>wo <C-W>=
 
 
 " 半視窗捲動
-nnoremap <Leader>d  <C-d>			" 往下捲動半個視窗
-nnoremap <Leader>u  <C-u>			" 往上捲動半個視窗
-
+nmap <A-m> zt
+nmap <C-m> zb
 
 " 在 Tab 視窗移動
 map <Leader>p <esc>:tabprevious<CR>
@@ -100,7 +99,6 @@ set pastetoggle=<F2>
 
 " 復行一次
 nnoremap U <C-r>
-
 
 "--------------------------------------------------------------
 " 程式碼編輯
@@ -131,19 +129,14 @@ imap <Leader>$ $();<Left><Left>
 "--------------------------------------------------------------
 " 行編輯
 
-" 複製一行，並繼續編輯
-nmap <Leader>d  <Esc>yyp
-nmap <Leader>D  <Esc>kyyp
-imap <Leader>d  <Esc>yyp
-imap <Leader>D  <Esc>kyyp
-
-
 " 不離開插入模式下，在游標下新插入一行
 imap <Leader>o  <Esc>o
 imap <Leader>O  <Esc>O
 
 " 游標所在處到行尾的文字，將之複製
-nnoremap Y y$
+"nnoremap Y y$
+nnoremap Y yy
+nnoremap D dd
 
 " 行間操作
 nnoremap H ^									" 游標移到行頭

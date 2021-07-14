@@ -27,9 +27,9 @@ set smartindent             "si: Smart indent
 
 " Tab 與空白控制
 set expandtab				" always uses spaces instead of tab characters
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
 
 " set backspace=2
 set backspace=start,eol,indent
@@ -111,9 +111,9 @@ autocmd FileType python let b:comment_leader='#'
 "--------------------------------------------------------------
 " Django Template
 
-autocmd BufNewFile,BufRead *.html set filetype=htmldjango
-autocmd FileType htmldjango setlocal expandtab shiftwidth=4 softtabstop=4
-autocmd FileType htmldjango let b:comment_leader='<!--'
+" autocmd BufNewFile,BufRead *.html set filetype=htmldjango
+" autocmd FileType htmldjango setlocal expandtab shiftwidth=2 softtabstop=2
+" autocmd FileType htmldjango let b:comment_leader='<!--'
 
 
 " === 自行判斷 filetype 是否為 htmldjango ===
@@ -127,28 +127,31 @@ autocmd FileType htmldjango let b:comment_leader='<!--'
 "  (1) {%\s*\(extends\|block\|load\)\>\|{#\s\+
 "  (2) {%\|{{\|{#
 
-" augroup filetypedetect
-"   " removes current htmldjango detection located at $VIMRUNTIME/filetype.vim
-"   autocmd! BufNewFile,BufRead *.html
-"   autocmd  BufNewFile,BufRead *.html call FThtml()
-"
-"   func! FThtml()
-"     let n = 1
-"     while n < 10 && n < line("$")
-"       if getline(n) =~ '\<DTD\s\+XHTML\s'
-"         setf xhtml
-"         return
-"       endif
-"       if getline(n) =~ '{%\|{{\|{#'
-"         setf django-html
-"         return
-"       endif
-"       let n = n + 1
-"     endwhile
-"     "setf html
-"     setf html
-"   endfunc
-" augroup END
+augroup filetypedetect
+  " removes current htmldjango detection located at $VIMRUNTIME/filetype.vim
+  " autocmd! BufNewFile,BufRead *.html
+  autocmd  BufNewFile,BufRead *.html call FThtml()
+  autocmd filetype html       setlocal expandtab shiftwidth=2 softtabstop=2
+  autocmd filetype htmldjango setlocal expandtab shiftwidth=2 softtabstop=2
+  autocmd filetype htmldjango let b:comment_leader='<!--'
+
+  func! FThtml()
+    let n = 1
+    while n < 10 && n < line("$")
+      if getline(n) =~ '\<DTD\s\+XHTML\s'
+        setf xhtml
+        return
+      endif
+      if getline(n) =~ '{%\|{{\|{#'
+        setf django-html
+        return
+      endif
+      let n = n + 1
+    endwhile
+    "setf html
+    setf html
+  endfunc
+augroup END
 
 " === 自動配對 ===
 " Buffer local pairs
