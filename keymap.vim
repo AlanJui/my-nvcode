@@ -12,12 +12,17 @@ let mapleader = ","
 " 切割視窗指令：
 "  - 水平切割： :sp   ==>  :10sp [FileName]10+
 "  - 垂直切割： :vsp  ==>  :vsp [FileName]
-nnoremap <Leader>wv <C-W>v 		" 遊標所在視窗做垂直切割
-nnoremap <Leader>w_ <C-W>v 		" 遊標所在視窗做垂直切割
-nnoremap <Leader>ws <C-W>s 		" 遊標所在視窗做水平切割
-nnoremap <Leader>w- <C-W>s 		" 遊標所在視窗做水平切割
-nnoremap <Leader>w\| <C-W>v		" 遊標所在視窗做垂直切割
+" nnoremap <Leader>wv <C-W>v 		" 遊標所在視窗做垂直切割
+" nnoremap <Leader>w_ <C-W>v 		" 遊標所在視窗做垂直切割
+" nnoremap <Leader>ws <C-W>s 		" 遊標所在視窗做水平切割
+" nnoremap <Leader>w- <C-W>s 		" 遊標所在視窗做水平切割
+" nnoremap <Leader>w\| <C-W>v		" 遊標所在視窗做垂直切割
 
+nmap <Leader>wv <C-W>v 		" 遊標所在視窗做垂直切割
+nmap <Leader>w_ <C-W>v 		" 遊標所在視窗做垂直切割
+nmap <Leader>ws <C-W>s 		" 遊標所在視窗做水平切割
+nmap <Leader>w- <C-W>s 		" 遊標所在視窗做水平切割
+nmap <Leader>w\| <C-W>v		" 遊標所在視窗做垂直切割
 
 " 調整視窗的寬度／高度
 " 指令：resize (res)
@@ -34,10 +39,10 @@ nmap <S-right> <C-w>>       " 水平往右
 nmap <S-up>    <C-w>+       " 垂直往上
 nmap <S-down>  <C-w>-       " 垂直往下
 
-nnoremap <silent> <Leader>+ :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
-" nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-" nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nmap <silent> <Leader>+ :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nmap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+nmap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nmap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 
 " 調整視窗大小尺寸
@@ -53,20 +58,20 @@ nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 
 
 " 在視窗間移動游標
-nnoremap <Leader>ww <C-W>w 		" 遊標移至下一個視窗
-nnoremap <Leader>wc <C-W>c      " 關閉遊標所在視窗
+nmap <Leader>ww <C-W>w 		" 遊標移至下一個視窗
+nmap <Leader>wc <C-W>c      " 關閉遊標所在視窗
 
-nnoremap <Leader>wj <C-W>j 		" 遊標移至垂直下方的視窗
-nnoremap <C-j>      <C-W>j 		" 遊標移至垂直下方的視窗
+nmap <Leader>wj <C-W>j 		" 遊標移至垂直下方的視窗
+nmap <C-j>      <C-W>j 		" 遊標移至垂直下方的視窗
 
-nnoremap <Leader>wk <C-W>k 		" 遊標移至垂直上方的視窗
-nnoremap <C-k>      <C-W>k 		" 遊標移至垂直上方的視窗
+nmap <Leader>wk <C-W>k 		" 遊標移至垂直上方的視窗
+nmap <C-k>      <C-W>k 		" 遊標移至垂直上方的視窗
 
-nnoremap <Leader>wh <C-W>h		" 遊標移至水平左方的視窗
-nnoremap <C-h>      <C-W>h		" 遊標移至水平左方的視窗
+nmap <Leader>wh <C-W>h		" 遊標移至水平左方的視窗
+nmap <C-h>      <C-W>h		" 遊標移至水平左方的視窗
 
-nnoremap <Leader>wl <C-W>l		" 遊標移至水平右方的視窗
-nnoremap <C-l>      <C-W>l		" 遊標移至水平右方的視窗
+nmap <Leader>wl <C-W>l		" 遊標移至水平右方的視窗
+nmap <C-l>      <C-W>l		" 遊標移至水平右方的視窗
 
 
 " window Zoom-in/Zoon-out
@@ -79,13 +84,13 @@ nmap <A-m> zt
 nmap <C-m> zb
 
 " 在 Tab 視窗移動
-map <Leader>p <esc>:tabprevious<CR>
-map <Leader>n <esc>:tabnext<CR>
+nmap <Leader>p <esc>:tabprevious<CR>
+nmap <Leader>n <esc>:tabnext<CR>
 
 
 " Tab operation
-nnoremap tn gt
-nnoremap tp gT
+nmap tn gt
+nmap tp gT
 
 
 "--------------------------------------------------------------
@@ -93,12 +98,13 @@ nnoremap tp gT
 
 " 離開插入模式，回返一般模式
 imap jj <Esc>
+imap jk <Esc>
 
 " 進入「貼上（Paste）」模式
 set pastetoggle=<F2>
 
 " 復行一次
-nnoremap U <C-r>
+nmap U <C-r>
 
 "--------------------------------------------------------------
 " 程式碼編輯
@@ -135,28 +141,28 @@ imap <Leader>O  <Esc>O
 
 " 游標所在處到行尾的文字，將之複製
 "nnoremap Y y$
-nnoremap Y yy
-nnoremap D dd
+nmap Y yy
+nmap D dd
 
 " 行間操作
-nnoremap H ^									" 游標移到行頭
-nnoremap L $									" 游標移到行尾
+nmap H ^									" 游標移到行頭
+nmap L $									" 游標移到行尾
 
 
 " 搬移文字(Move Line)
-nnoremap <S-DOWN> :m .+1<CR>==
-nnoremap <S-UP> :m .-2<CR>==
-inoremap <S-DOWN> <Esc>:m .+1<CR>==gi
-inoremap <S-UP> <Esc>:m .-2<CR>==gi
-vnoremap <S-DOWN> :m '>+1<CR>gv=gv
-vnoremap <S-UP> :m '<-2<CR>gv=gv
+nmap <S-DOWN> :m .+1<CR>==
+nmap <S-UP> :m .-2<CR>==
+imap <S-DOWN> <Esc>:m .+1<CR>==gi
+imap <S-UP> <Esc>:m .-2<CR>==gi
+vmap <S-DOWN> :m '>+1<CR>gv=gv
+vmap <S-UP> :m '<-2<CR>gv=gv
 
-" nnoremap <A-j> :m .+1<CR>
-" nnoremap <A-k> :m .-2<CR>
-" inoremap <A-j> <Esc>:m .+1<CR>
-" inoremap <A-k> <Esc>:m .-2<CR>
-" vnoremap <A-j> :m '>+1<CR>
-" vnoremap <A-k> :m '<-2<CR>
+nmap <A-j> :m .+1<CR>
+nmap <A-k> :m .-2<CR>
+imap <A-j> <Esc>:m .+1<CR>
+imap <A-k> <Esc>:m .-2<CR>
+vmap <A-j> :m '>+1<CR>
+vmap <A-k> :m '<-2<CR>
 
 
 "--------------------------------------------------------------
@@ -175,15 +181,15 @@ vnoremap <S-UP> :m '<-2<CR>gv=gv
 
 "--------------------------------------------------------------
 " 跳脫 Visual Mode
-vnoremap v <Esc>
+vmap v <Esc>
 
 
 " Automatically re-read file if a change was detected outside of vim
 set autoread
 
 " 關閉目前正編輯的檔案
-map <Leader>fc :bd<CR>      " 已存檔
-map <Leader>fC :bd!<CR>     " 已編輯，不存檔，強迫關閉
+nmap <Leader>fc :bd<CR>      " 已存檔
+nmap <Leader>fC :bd!<CR>     " 已編輯，不存檔，強迫關閉
 
 
 " 儲存檔案
@@ -201,14 +207,14 @@ cmap w!! w !sudo tee %
 
 
 " 退出 Vim
-noremap <C-q> :quit<CR>
-noremap <C-Q> :qa!<CR>
+nmap <C-q> :quit<CR>
+nmap <C-Q> :qa!<CR>
 
 
 " === Search shorcuts === "
 "   <leader>s - Find and replace
 "   <leader>S - Claer highlighted search terms while preserving history
-map <leader>s :%s///<left><left>
+nmap <leader>s :%s///<left><left>
 
 " 清除搜尋完後的醒目提示
 nmap <silent> <leader>S :nohlsearch<CR>
