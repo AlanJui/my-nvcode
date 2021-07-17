@@ -107,11 +107,12 @@ else
     endif
 
     " Status line
-    source ~/.config/my-nvim/config/light-line.vim
-    source ~/.config/my-nvim/config/airline-theme.vim
+    " source ~/.config/my-nvim/config/light-line.vim
+    " source ~/.config/my-nvim/config/airline-theme.vim
 
     " luafile ~/.config/my-nvim/lua/nvcodeline.lua
-    " luafile ~/.config/my-nvim/lua/my-statusline.lua
+    luafile ~/.config/my-nvim/lua/my-line.lua
+    " luafile ~/.config/my-nvim/lua/my-line2.lua
 
     "==========================================================
     " 其它設定
