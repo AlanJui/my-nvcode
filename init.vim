@@ -111,8 +111,9 @@ else
     " source ~/.config/my-nvim/config/airline-theme.vim
 
     " luafile ~/.config/my-nvim/lua/nvcodeline.lua
-    luafile ~/.config/my-nvim/lua/my-line.lua
+    " luafile ~/.config/my-nvim/lua/my-line.lua
     " luafile ~/.config/my-nvim/lua/my-line2.lua
+    luafile ~/.config/my-nvim/lua/my/galaxyline/init.lua
 
     "==========================================================
     " 其它設定
