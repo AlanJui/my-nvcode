@@ -6,7 +6,8 @@
 "===========================================================
 
 scriptencoding utf-8
-set shell=$SHELL
+" set shell=$SHELL
+set shell=zsh
 set nocompatible
 let g:mapleader = ","
 
@@ -55,6 +56,8 @@ else
     source ~/.config/my-nvim/config/plantuml-previewer.vim
     source ~/.config/my-nvim/config/find-and-replace.vim
     source ~/.config/my-nvim/config/instant-markdown.vim
+    source ~/.config/my-nvim/config/vim-markdown.vim
+    source ~/.config/my-nvim/config/indentLine.vim
 
     "===========================================================
     " Vim 通用設定
@@ -65,11 +68,6 @@ else
     " 程式碼版面與格式設定
     "==========================================================
     source ~/.config/my-nvim/format.vim
-
-    " Fix conflicts with indentLine and vim-json
-    let g:vim_json_syntax_conceal=0
-    let g:indentLine_noConcealCursor=""
-    let g:indentLine_noConcealCursor="nc"
 
     "==========================================================
     " COC-NVIM 配合環境
@@ -91,20 +89,22 @@ else
 
     " Theme Colors
     " source ~/.config/my-nvim/config/color-theme-ccc.vim
-    " if exists("&termguicolors") && exists("&winblend")
-    "     let g:neosolarized_termtrans=1
-    "     runtime ~/.config/my-nvim/colors/solarized_true.vim
-    "     set termguicolors
-    "     set winblend=0
-    "     set wildoptions=pum
-    "     set pumblend=5
-    " else
-    "     " colorscheme gruvbox
-    "     set background=dark
-    "     colorscheme solarized8
-    " endif
-    set background=dark
-    colorscheme solarized8
+    if exists("&termguicolors") && exists("&winblend")
+      syntax enable
+      set termguicolors
+      set winblend=0
+      set wildoptions=pum
+      set pumblend=5
+      set background=dark
+      " Use NeoSolarized
+      let g:neosolarized_termtrans=1
+      " runtime ./colors/NeoSolarized.vim
+      " colorscheme NeoSolarized
+      colorscheme solarized8
+    else
+      set background=dark
+      colorscheme gruvbox
+    endif
 
     " Status line
     " source ~/.config/my-nvim/config/light-line.vim
@@ -123,13 +123,6 @@ else
       endif
     endif
 
-
     set exrc
-
-
-    let g:vim_markdown_conceal = 0
-    let g:vim_markdown_conceal_code_blocks = 0
-
-    command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 endif

@@ -31,6 +31,10 @@ let g:coc_global_extensions = [
 
 
 "--------------------------------------------------------------
+" 要求 coco-preitter 在存檔指令執行之後，自動編排檔案格式
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+"--------------------------------------------------------------
 " List all "Lint Messages"
 nmap <Leader>ll :CocList diagnostics<Enter>
 

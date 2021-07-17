@@ -1,6 +1,11 @@
 "--------------------------------------------------------------
 " indentLine
 
+" Fix conflicts with indentLine and vim-json
+let g:vim_json_syntax_conceal=0
+let g:indentLine_noConcealCursor=""
+let g:indentLine_noConcealCursor="nc"
+
 let g:indentLine_enabled = 0
 let g:indentLine_showFirstIndentLevel = 1
 

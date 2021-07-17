@@ -2,17 +2,6 @@
 " 程式碼排版
 "==============================================================
 
-
-" 行號顯示
-set number                  " 顯示行號
-set relativenumber          " 在遊標所在處顯示相對行號
-set cursorline
-
-" 令程式碼檔案可有語法（Syntax）高亮標示
-syntax on
-filetype on
-set background=dark
-
 " 程式碼排版規範
 set colorcolumn=80          " 設定每行能放 80 個字元
 
@@ -21,7 +10,7 @@ set nowrap                  " 不用依據 colorcolumn 的規範，在自動換�
 " set wrap                    " 設定自動換行
 
 " 自動縮排控制
-filetype indent on
+filetype plugin indent on
 set autoindent              "ai: indent a new line the same amount as the line just typed
 set smartindent             "si: Smart indent
 
@@ -31,7 +20,8 @@ set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 
-" set backspace=2
+" 在 Insert Mode 可用 《倒刪鍵／BS》鍵
+" set backspace=indent,eol,start
 set backspace=start,eol,indent
 
 " 標示多餘空白【務必放在 ColorScheme 設定之前】
@@ -56,9 +46,6 @@ let b:comment_leader='//'
 " 依據 filetype 設定 Tab 應有的內縮空白格式
 autocmd FileType vim let b:comment_leader='"'
 
-" 在 Insert Mode 可用 《BS》鍵
-set backspace=indent,eol,start
-
 " --- 自動去除不必要的空白 ---
 highlight BadWhitespace ctermbg=red guibg=darkred
 
@@ -66,7 +53,7 @@ autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
 autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "--------------------------------------------------------------
-" JavaScrip
+" JavaScript
 
 autocmd BufNewFile,BufRead *.js set filetype=javascript
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2

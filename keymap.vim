@@ -111,6 +111,7 @@ nmap U <C-r>
 
 
 " 設定〔行號〕顯示模式
+nmap <C-l><C-l> :set rnu!<CR>
 nmap <Leader>nr :set relativenumber<CR>
 nmap <Leader>nn :set norelativenumber<CR>
 
