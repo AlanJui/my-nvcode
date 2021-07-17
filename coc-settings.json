@@ -89,15 +89,9 @@
   "python.linting.ignorePatterns": [".vscode/*.py", "**/site-packages/**/*.py"],
 
   // coc-pyright
-  // "python.analysis.autoImportCompletions": true,
-  // "python.analysis.autoSearchPaths": true,
-  // "python.analysis.diagnosticMode": "workspace",
-  // "python.pythonPath": "/Users/alanjui/.pyenv/versions/3.9.1/bin/python",
-  // "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
-  // "python.venvFolders": ["venv-3.9.1", ".venv", "venv"],
-  "pyright.disableCompletion": false,
-  "pyright.disableLanguageServices": false,
-  "pyright.disableOrganizeImports": false,
+  // "pyright.disableCompletion": false,
+  // "pyright.disableLanguageServices": false,
+  // "pyright.disableOrganizeImports": false,
 
   // Language Servers
   "languageserver": {
@@ -106,17 +100,17 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
-    },
-    "lua": {
-      "command": "~/.local/share/lua-language-server/bin/lua-language-server",
-      "args": [
-        "-E",
-        "-e",
-        "LANG=en",
-        "~/.local/share/lua-language-server/main.lua"
-      ],
-      "filetypes": ["lua"],
-      "trace.server": "verbose"
     }
+    // "lua": {
+    //   "command": "~/.local/share/lua-language-server/bin/lua-language-server",
+    //   "args": [
+    //     "-E",
+    //     "-e",
+    //     "LANG=en",
+    //     "~/.local/share/lua-language-server/main.lua"
+    //   ],
+    //   "filetypes": ["lua"],
+    //   "trace.server": "verbose"
+    // }
   }
 }

@@ -136,7 +136,13 @@ else
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
-    Plug 'itchyny/lightline.vim'
+    " Plug 'itchyny/lightline.vim'
+
+    " Galaxy Line
+    Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+    " If you want to display icons, then use one of these plugins:
+    Plug 'kyazdani42/nvim-web-devicons' " lua
+    Plug 'ryanoasis/vim-devicons' " vimscript
 
     "------------------------------------------------------------
     " 其它
