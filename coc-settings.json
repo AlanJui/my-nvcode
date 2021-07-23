@@ -1,4 +1,25 @@
 {
+  // diagnostic-languageserver
+  "diagnostic-languageserver.filetypes": {
+    //"python": ["flake8", "pydocstyle", "bandit", "mypy"],
+    "vim": "vint",
+    "markdown": ["write-good", "markdownlint"],
+    "sh": "shellcheck",
+    "yaml": ["yamlint"],
+    "cmake": ["cmake-lint", "cmakelint"]
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    //"python": ["black", "autopep8", "isort"],
+    "lua": "lua-format",
+    "sh": "shfmt",
+    "cmake": "cmake-format"
+  },
+  // diagnostics
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+
   // Explorer
   //"explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
   "explorer.width": 30,
@@ -23,14 +44,15 @@
     "mA": "addDirectory"
   },
 
+  // Django Support
+  "html.filetypes": ["html", "handlebars", "htmldjango", "blade"],
+  "htmldjango.enable": true,
+
   // Auto format
   "coc.preferences.formatOnSaveFiletypes": [
     "python",
-    "python.django",
     "html",
     "htmldjango",
-    "django-html",
-    "html",
     "css",
     "javascript",
     "javascriptreact",
@@ -60,7 +82,6 @@
   "emmet.showAbbreviationSuggestions": true,
   "emmet.includeLanguages": {
     "htmldjango": "html",
-    "django-html": "html",
     "python.django": "python",
     "vue-html": "html",
     "javascript": "javascriptreact"
@@ -69,12 +90,6 @@
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.noselect": false,
-
-  // diagnostics
-  "diagnostic.errorSign": " ",
-  "diagnostic.warningSign": " ",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": " ",
 
   // Python: https://github.com/neoclide/coc-python
   "python.formatting.provider": "autopep8",
@@ -103,6 +118,10 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
+    },
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
     }
     //   "lua": {
     //     "command": "~/.local/share/lua-language-server/bin/macOS/lua-language-server",

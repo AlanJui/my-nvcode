@@ -31,7 +31,7 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 0
 
 " omni-completion function: use for triggering completion manually with <C-x><C-o>
-set omnifunc=ale#completion#OmniFunc
+" set omnifunc=ale#completion#OmniFunc
 
 nmap <F10> :ALEFix<CR>
 

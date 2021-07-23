@@ -40,7 +40,6 @@ else
     source ~/.config/my-nvim/plugins.vim
 
     " 擴充套件設定（Configuration of Plugins)
-    " source ~/.config/my-nvim/config/black-nvim_rc.vim
     source ~/.config/my-nvim/config/ale_rc.vim
 
     source ~/.config/my-nvim/config/ranger.vim
@@ -110,7 +109,7 @@ else
     endif
 
     " Status line
-    source ~/.config/my-nvim/config/airline-theme.vim
+    " source ~/.config/my-nvim/config/airline-theme.vim
 
     " luafile ~/.config/my-nvim/lua/nvcodeline.lua
     " luafile ~/.config/my-nvim/lua/my-line.lua

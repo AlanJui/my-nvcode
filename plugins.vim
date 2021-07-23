@@ -40,7 +40,6 @@ else
     " Python
 
     Plug 'dense-analysis/ale'
-    " Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
 
     "------------------------------------------------------------
     " 編輯

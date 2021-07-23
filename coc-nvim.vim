@@ -7,8 +7,10 @@ let mapleader = ","
 
 " coc extensions
 let g:coc_global_extensions = [
+\ 'coc-htmldjango',
 \ 'coc-explorer',
 \ 'coc-syntax',
+\ 'coc-diagnostic',
 \ 'coc-prettier',
 \ 'coc-snippets',
 \ 'coc-tslint-plugin',
@@ -31,7 +33,11 @@ let g:coc_global_extensions = [
 
 
 "--------------------------------------------------------------
-" 要求 coco-preitter 在存檔指令執行之後，自動編排檔案格式
+let g:coc_filetype_map = {
+      \ 'jinja.html': 'htmldjango',
+      \  }
+
+" 要求 coc-pretter 在存檔指令執行之後，自動編排檔案格式
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " 手動要求編排檔案格式
