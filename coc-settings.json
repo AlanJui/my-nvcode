@@ -6,7 +6,7 @@
   "explorer.file.root.template": "[icon] [git] [hidden & 1] PROJECT ([root])",
   "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
   // "explorer.icon.enableVimDevicons": true,
-  "explorer.icon.enabledNerdFont": true,
+  // "explorer.icon.enabledNerdFont": true,
   "explorer.icon.source": "vim-devicons",
   "explorer.previewAction.onHover": false,
   "explorer.file.showHiddenFiles": true,
@@ -93,6 +93,9 @@
   // "pyright.disableLanguageServices": false,
   // "pyright.disableOrganizeImports": false,
 
+  // TypeScript Language Servers
+  "tsserver.log": "verbose",
+
   // Language Servers
   "languageserver": {
     "bash": {
@@ -101,16 +104,16 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     }
-    // "lua": {
-    //   "command": "~/.local/share/lua-language-server/bin/lua-language-server",
-    //   "args": [
-    //     "-E",
-    //     "-e",
-    //     "LANG=en",
-    //     "~/.local/share/lua-language-server/main.lua"
-    //   ],
-    //   "filetypes": ["lua"],
-    //   "trace.server": "verbose"
-    // }
+    //   "lua": {
+    //     "command": "~/.local/share/lua-language-server/bin/macOS/lua-language-server",
+    //     "args": [
+    //       "-E",
+    //       "-e",
+    //       "LANG=en",
+    //       "~/.local/share/lua-language-server/main.lua"
+    //     ],
+    //     "filetypes": ["lua"],
+    //     "trace.server": "verbose"
+    //   }
   }
 }

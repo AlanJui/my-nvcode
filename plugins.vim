@@ -37,6 +37,12 @@ if exists('g:vscode')
 
 else
     "------------------------------------------------------------
+    " Python
+
+    Plug 'dense-analysis/ale'
+    " Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
+
+    "------------------------------------------------------------
     " 編輯
 
     " Auto-complete (Intellisense Engine)
@@ -117,6 +123,7 @@ else
     "------------------------------------------------------------
     " 使用者操作介面
 
+    " 選單畫面
     Plug 'liuchengxu/vim-which-key'
 
     " Float Terminal
@@ -133,13 +140,14 @@ else
     Plug 'morhetz/gruvbox'
 
     " Customized vim status line
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
     " Plug 'itchyny/lightline.vim'
 
     " Galaxy Line
-    Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+    " Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+
     " If you want to display icons, then use one of these plugins:
     Plug 'kyazdani42/nvim-web-devicons' " lua
     Plug 'ryanoasis/vim-devicons' " vimscript

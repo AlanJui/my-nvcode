@@ -1,7 +1,7 @@
 " Keymap
-map <silent> <Leader>f :Files<CR>
-map <silent> <Leader>g :GFiles<CR>
-map <silent> <leader>b :Buffers<CR>
+map <silent> <Leader>ff :Files<CR>
+map <silent> <Leader>fg :GFiles<CR>
+map <silent> <leader>fb :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>

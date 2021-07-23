@@ -28,11 +28,6 @@ set backspace=start,eol,indent
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
-" Automatically removing all trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
-autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
-
-
 " 不同 filetype 擁有各自的 "內縮設定" ，如： Python 為4空格；HTML則為2空格
 filetype plugin indent on
 " filetype off
@@ -43,14 +38,32 @@ filetype plugin indent on
 " 設定「註解」預設符號
 let b:comment_leader='//'
 
-" 依據 filetype 設定 Tab 應有的內縮空白格式
-autocmd FileType vim let b:comment_leader='"'
-
 " --- 自動去除不必要的空白 ---
 highlight BadWhitespace ctermbg=red guibg=darkred
 
-autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
-autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
+" autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
+
+
+"--------------------------------------------------------------
+" Vim
+" 依據 filetype 設定 Tab 應有的內縮空白格式
+autocmd FileType vim let b:comment_leader='"'
+
+autocmd FileType vim setlocal expandtab shiftwidth=2 softtabstop=2
+
+"--------------------------------------------------------------
+" Lua
+au BufNewFile,BufRead *.lua
+    \ set expandtab       |" replace tabs with spaces
+    \ set autoindent      |" copy indent when starting a new line
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
 
 "--------------------------------------------------------------
 " JavaScript
@@ -86,8 +99,15 @@ autocmd FileType css let b:comment_leader='/*'
 
 " autocmd BufNewFile,BufRead *.py set filetype=python.django
 autocmd BufNewFile,BufRead *.py set filetype=python
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python let b:comment_leader='#'
+
+" autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+au BufNewFile,BufRead *.py
+    \ set expandtab       |" replace tabs with spaces
+    \ set autoindent      |" copy indent when starting a new line
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
 
 " tabstop(ts), shiftwidth(sw) and softtabstop(sts)
 " autocmd FileType python set sw=4
@@ -156,4 +176,4 @@ augroup END
 
 " To disable characters for a specified filetype
 " autocmd FileType markdown let b:coc_pairs_disabled = ['`']
-autocmd BufNewFile, BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown

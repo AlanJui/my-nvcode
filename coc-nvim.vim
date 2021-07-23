@@ -11,7 +11,6 @@ let g:coc_global_extensions = [
 \ 'coc-syntax',
 \ 'coc-prettier',
 \ 'coc-snippets',
-\ 'coc-tsserver',
 \ 'coc-tslint-plugin',
 \ 'coc-highlight',
 \ 'coc-emmet',
@@ -26,6 +25,7 @@ let g:coc_global_extensions = [
 \ 'coc-xml',
 \ 'coc-yank',
 \ 'coc-pyright',
+\ 'coc-tsserver',
 \ ]
 " \ 'coc-python',
 
@@ -33,6 +33,10 @@ let g:coc_global_extensions = [
 "--------------------------------------------------------------
 " 要求 coco-preitter 在存檔指令執行之後，自動編排檔案格式
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" 手動要求編排檔案格式
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 "--------------------------------------------------------------
 " List all "Lint Messages"

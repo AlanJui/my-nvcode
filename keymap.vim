@@ -1,6 +1,7 @@
 " 設定 <Leader> 鍵
 let mapleader = ","
 
+nmap <C-r><C-r> :source ~/.config/nvim/init.vim<CR>
 
 "======================================================================
 " 快速鍵設定
@@ -189,8 +190,8 @@ vmap v <Esc>
 set autoread
 
 " 關閉目前正編輯的檔案
-nmap <Leader>fc :bd<CR>      " 已存檔
-nmap <Leader>fC :bd!<CR>     " 已編輯，不存檔，強迫關閉
+nmap <Leader>fe :bd<CR>      " 已存檔
+nmap <Leader>fE :bd!<CR>     " 已編輯，不存檔，強迫關閉
 
 
 " 儲存檔案

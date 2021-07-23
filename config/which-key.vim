@@ -44,7 +44,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
+"let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
+let g:which_key_map['.'] = [ ':e ~/.config/my-nvim/init.vim'                   , 'open init' ]
 let g:which_key_map['/'] = [ ':call Comment()'                                 , 'comment' ]
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
