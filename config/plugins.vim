@@ -38,8 +38,12 @@ if exists('g:vscode')
   " 適用於 VS Code 的 Plugin 置於此處
 else
     "------------------------------------------------------------
-    " Python
+    " LSP
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'glepnir/lspsaga.nvim'
 
+    "------------------------------------------------------------
+    " Python
     Plug 'dense-analysis/ale'
 
     "------------------------------------------------------------
@@ -121,9 +125,6 @@ else
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'glepnir/lspsaga.nvim'
-
 
     " File manage and exploration
     Plug 'kyazdani42/nvim-web-devicons' " for file cions
