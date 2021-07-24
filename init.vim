@@ -109,12 +109,9 @@ else
     endif
 
     " Status line
-    " source ~/.config/my-nvim/config/airline-theme.vim
-
-    " luafile ~/.config/my-nvim/lua/nvcodeline.lua
-    " luafile ~/.config/my-nvim/lua/my-line.lua
-    " luafile ~/.config/my-nvim/lua/my-line2.lua
-    "luafile ~/.config/my-nvim/lua/my/galaxyline/init.lua
+    " runtime ~/.config/my-nvim/after/plugin/statusline.luv
+    " source ~/.config/my-nvim/after/plugin/airline-theme.vim
+    " luafile ~/.config/my-nvim/lua/plugins/galaxyline/init.lua
 
     "==========================================================
     " 其它設定
