@@ -1,7 +1,12 @@
 " 設定 <Leader> 鍵
 let mapleader = ","
 
+nmap <Leader>i  :source ~/.config/nvim/init.vim<CR>
 nmap <C-r><C-r> :source ~/.config/nvim/init.vim<CR>
+
+" 設定〔行號〕顯示模式
+nmap <C-l><C-l> :set rnu!<CR>
+
 
 "======================================================================
 " 快速鍵設定
@@ -104,35 +109,6 @@ imap jk <Esc>
 " 進入「貼上（Paste）」模式
 set pastetoggle=<F2>
 
-" 復行一次
-nmap U <C-r>
-
-"--------------------------------------------------------------
-" 程式碼編輯
-
-
-" 設定〔行號〕顯示模式
-nmap <C-l><C-l> :set rnu!<CR>
-nmap <Leader>nr :set relativenumber<CR>
-nmap <Leader>nn :set norelativenumber<CR>
-
-
-" Python 專用
-imap ,, <Esc>A,
-imap ,,, <Right>,
-
-imap .. <Esc>A.
-imap ... <Right>.
-
-imap :: <Esc>A:
-imap ::: <Right>:
-
-imap ;; <Esc>A;
-imap ;;; <Right>;
-
-" JavaScript
-imap <Leader>{ <Esc>A<Space>{}<Left>
-imap <Leader>$ $();<Left><Left>
 
 "--------------------------------------------------------------
 " 行編輯
@@ -150,6 +126,8 @@ nmap D dd
 nmap H ^									" 游標移到行頭
 nmap L $									" 游標移到行尾
 
+nmap X d$
+
 
 " 搬移文字(Move Line)
 nmap <S-DOWN> :m .+1<CR>==
@@ -166,6 +144,27 @@ imap <A-k> <Esc>:m .-2<CR>
 vmap <A-j> :m '>+1<CR>
 vmap <A-k> :m '<-2<CR>
 
+
+"--------------------------------------------------------------
+" 程式碼編輯
+
+
+" " Python 專用
+" imap ,, <Esc>A,
+" imap ,,, <Right>,
+"
+" imap .. <Esc>A.
+" imap ... <Right>.
+"
+" imap :: <Esc>A:
+" imap ::: <Right>:
+"
+" imap ;; <Esc>A;
+" imap ;;; <Right>;
+"
+" " JavaScript
+" imap <Leader>{ <Esc>A<Space>{}<Left>
+" imap <Leader>$ $();<Left><Left>
 
 "--------------------------------------------------------------
 " 游標移動
@@ -220,5 +219,3 @@ nmap <leader>s :%s///<left><left>
 
 " 清除搜尋完後的醒目提示
 nmap <silent> <leader>S :nohlsearch<CR>
-
-

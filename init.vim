@@ -43,32 +43,12 @@ else
     " 擴充套件設定（Configuration of Plugins)
     " 除了使用以下 souerce 指令載入設定外，亦可將各 Plugin 的設定檔 (.vim/.lua)
     " ，置放在目錄路徑： ~/.config/nvim/after/plugin/ 處。
-    " source ~/.config/my-nvim/config/ranger.vim
     " source ~/.config/my-nvim/config/fzf.vim
-    " source ~/.config/my-nvim/config/surround.vim
-    " source ~/.config/my-nvim/config/auto-pairs.vim
-    " source ~/.config/my-nvim/config/multiple-cursors.vim
-    " source ~/.config/my-nvim/config/simply-fold.vim
-    " source ~/.config/my-nvim/config/nerd-commenter.vim
-    " source ~/.config/my-nvim/config/change-tag-name.vim
-    " source ~/.config/my-nvim/config/live-server.vim
-    " source ~/.config/my-nvim/config/markdown-preview.vim
-    " source ~/.config/my-nvim/config/window-swap.vim
-    " source ~/.config/my-nvim/config/float-term.vim
-    " source ~/.config/my-nvim/config/echodoc.vim
-    " source ~/.config/my-nvim/config/plantuml-previewer.vim
-    " source ~/.config/my-nvim/config/find-and-replace.vim
-    " source ~/.config/my-nvim/config/instant-markdown.vim
-    " source ~/.config/my-nvim/config/vim-markdown.vim
-    " source ~/.config/my-nvim/config/indentLine.vim
-
-    " source ~/.config/my-nvim/config/coc-explorer.vim
-    " source ~/.config/my-nvim/config/which-key.vim
 
     "==========================================================
     " COC-NVIM 設定
     "==========================================================
-    source ~/.config/my-nvim/config/coc-nvim.vim
+    source ~/.config/my-nvim/coc-nvim.vim
 
     "==========================================================
     " 載入 Lua 設定檔

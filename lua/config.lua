@@ -1,24 +1,11 @@
 -- load plugins
 require('plugins.statusline')
 
--- -- configure nvim-bufferline
--- vim.opt.termguicolors = true
--- require('bufferline').setup{
---   options = {
---     numbers = 'none',
---     separator_style = 'thin',
---     always_show_bufferline = true,
---     offsets = {
---       -- {
---       --   filetype = 'nerdtree',
---       --   text = 'NERDTree',
---       --   text_align = 'center',
---       -- },
---       {
---         filetype = 'NvimTree',
---         text = 'NvimTree',
---         text_align = 'center',
---       }
---     }
---   }
--- }
+-- configure plugin: lspsaga
+require('lsp.lspsaga')
+
+-- setup Lua Language Server
+require('lsp.lua-ls')
+
+-- setup TypeScript Language Server
+require('lsp.typescript-ls')
