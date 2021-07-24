@@ -177,3 +177,14 @@ augroup END
 " To disable characters for a specified filetype
 " autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+" set the max width to 80 for Markdown files
+autocmd FileType markdown setlocal
+          \ textwidth=80
+          \ colorcolumn=79
+          \ conceallevel=2
+
+" change the background color for markdown code blocks
+autocmd FileType markdown
+          \ highlight codeBlockBackground ctermbg=234 |
+          \ call color_code_blocks()

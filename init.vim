@@ -33,6 +33,7 @@ if exists('g:vscode')
     " VSCode extension
     source ~/.config/my-nvim/config/format.vim
     source ~/.config/my-nvim/config/keymap.vim
+    runtime 'vscode.vim'
 else
     " Neovim Plugins
 
@@ -64,6 +65,16 @@ else
     " source ~/.config/my-nvim/config/coc-explorer.vim
     " source ~/.config/my-nvim/config/which-key.vim
 
+    "==========================================================
+    " COC-NVIM 設定
+    "==========================================================
+    source ~/.config/my-nvim/config/coc-nvim.vim
+
+    "==========================================================
+    " 載入 Lua 設定檔
+    "==========================================================
+    execute "lua require('config')"
+
     "===========================================================
     " Vim 通用設定
     "===========================================================
@@ -73,11 +84,6 @@ else
     " 程式碼版面與格式設定
     "==========================================================
     source ~/.config/my-nvim/config/format.vim
-
-    "==========================================================
-    " COC-NVIM 配合環境
-    "==========================================================
-    source ~/.config/my-nvim/config/coc-nvim.vim
 
     "==========================================================
     " 快速鍵設定
