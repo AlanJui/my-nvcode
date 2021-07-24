@@ -1,4 +1,5 @@
-"============================================================
+ocSearch 
+
 " vim-which-key.vim
 "------------------------------------------------------------
 
@@ -44,22 +45,23 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-"let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
-let g:which_key_map['.'] = [ ':e ~/.config/my-nvim/init.vim'                   , 'open init' ]
-let g:which_key_map['/'] = [ ':call Comment()'                                 , 'comment' ]
-let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'file explorer' ]
-let g:which_key_map['E'] = [ ':FloatermNew vifm'                               , 'ViFm file explorer' ]
-let g:which_key_map['f'] = [ ':Ranger'                                         , 'external file explorer' ]
-let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
-let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map['o'] = [ ':Buffers'                                        , 'switch open files' ]
-let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
-let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                         , 'quickfix' ]
-let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
-let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'swap window' ]
+" let g:which_key_map['.'] = [ ':e ~/.config/my-nvim/init.vim'                    , 'open init' ]
+let g:which_key_map['.'] = [ ':e $MYVIMRC'                                      , 'open init' ]
+let g:which_key_map['/'] = [ ':call Comment()'                                  , 'comment' ]
+let g:which_key_map[';'] = [ ':Commands'                                        , 'commands' ]
+let g:which_key_map['='] = [ '<C-W>='                                           , 'balance windows' ]
+let g:which_key_map['e'] = [ ':NvimTreeToggle'                                  , 'file explorer' ]
+let g:which_key_map['E'] = [ ':FloatermNew vifm'                                , 'ViFm file explorer' ]
+let g:which_key_map['f'] = [ ':Ranger'                                          , 'external file explorer' ]
+let g:which_key_map['h'] = [ '<C-W>s'                                           , 'split below']
+let g:which_key_map['n'] = [ ':let @/ = ""'                                     , 'no highlight' ]
+let g:which_key_map['o'] = [ ':Telescope buffers'                               , 'switch open files' ]
+let g:which_key_map['p'] = [ ':Telescope files'                                 , 'search files' ]
+let g:which_key_map['g'] = [ ':Telescope live_grep'                             , 'search live grep' ]
+let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                          , 'quickfix' ]
+let g:which_key_map['u'] = [ ':UndotreeToggle'                                  , 'undo tree']
+let g:which_key_map['v'] = [ '<C-W>v'                                           , 'split right']
+let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'                , 'swap window' ]
 
 " Group mappings
 
@@ -384,4 +386,3 @@ let g:which_key_map.u = {
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
-

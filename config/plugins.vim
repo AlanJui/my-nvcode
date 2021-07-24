@@ -89,39 +89,52 @@ else
     " === Syntax Highlighting === "
 
     " Syntax highlighting for nginx
-    Plug 'chr4/nginx.vim'
+    " Plug 'chr4/nginx.vim'
 
     " Syntax for json with comments
-    Plug 'elzr/vim-json'
-    Plug 'neoclide/jsonc.vim'
+    " Plug 'elzr/vim-json'
+    " Plug 'neoclide/jsonc.vim'
 
     " Syntax highlighting for javascript libraries
-    Plug 'othree/javascript-libraries-syntax.vim'
+    " Plug 'othree/javascript-libraries-syntax.vim'
 
 
     "------------------------------------------------------------
     " 檔案操作
 
-    " Denite - Fuzzy finding, buffer management
-    " Plug 'Shougo/denite.nvim'
-    " Plug 'roxma/nvim-yarp'
-    " Plug 'roxma/vim-hug-neovim-rpc'
-    " Plug 'chemzqm/denite-git'
-    " Plug 'neoclide/coc-denite'
-
     " File manage and exploration
+    Plug 'nvim-telescope/telescope.nvim'
     Plug 'francoiscabrol/ranger.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
     " === Git Plugins === "
     " Enable git changes to be shown in sign column
-    Plug 'mhinz/vim-signify'
+    Plug 'airblade/vim-gitgutter'
+    " Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-fugitive'
 
 
     "------------------------------------------------------------
     " 使用者操作介面
+
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'glepnir/lspsaga.nvim'
+
+
+    " File manage and exploration
+    Plug 'kyazdani42/nvim-web-devicons' " for file cions
+    Plug 'kyazdani42/nvim-tree.lua'
+
+    " Status line
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
+
+    " Galaxy Line
+    Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
     " 選單畫面
     Plug 'liuchengxu/vim-which-key'
@@ -139,17 +152,7 @@ else
     Plug 'lifepillar/vim-solarized8'
     Plug 'morhetz/gruvbox'
 
-    " Customized vim status line
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-
-    " Plug 'itchyny/lightline.vim'
-
-    " Galaxy Line
-    " Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-
     " If you want to display icons, then use one of these plugins:
-    Plug 'kyazdani42/nvim-web-devicons' " lua
     Plug 'ryanoasis/vim-devicons' " vimscript
 
     "------------------------------------------------------------

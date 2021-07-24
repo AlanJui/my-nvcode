@@ -8,7 +8,6 @@ let mapleader = ","
 " coc extensions
 let g:coc_global_extensions = [
 \ 'coc-htmldjango',
-\ 'coc-explorer',
 \ 'coc-syntax',
 \ 'coc-diagnostic',
 \ 'coc-prettier',
@@ -29,6 +28,7 @@ let g:coc_global_extensions = [
 \ 'coc-pyright',
 \ 'coc-tsserver',
 \ ]
+" \ 'coc-explorer',
 " \ 'coc-python',
 
 
