@@ -22,11 +22,22 @@ set tabstop=2
 
 " 在 Insert Mode 可用 《倒刪鍵／BS》鍵
 " set backspace=indent,eol,start
-set backspace=start,eol,indent
+set backspace=start,eol
 
 " 標示多餘空白【務必放在 ColorScheme 設定之前】
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+" --- 自動去除不必要的空白 ---
+highlight BadWhitespace ctermbg=red guibg=darkred
+
+autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
+autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
+
 
 " 不同 filetype 擁有各自的 "內縮設定" ，如： Python 為4空格；HTML則為2空格
 filetype plugin indent on
@@ -37,17 +48,6 @@ filetype plugin indent on
 
 " 設定「註解」預設符號
 let b:comment_leader='//'
-
-" --- 自動去除不必要的空白 ---
-highlight BadWhitespace ctermbg=red guibg=darkred
-
-" autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
-" autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-" Automatically removing all trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
-autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
-
 
 "--------------------------------------------------------------
 " Vim

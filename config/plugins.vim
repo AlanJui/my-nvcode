@@ -88,7 +88,8 @@ else
     Plug 'tmhedberg/SimpylFold'
 
     " Displaying thin vertical lines
-    Plug 'Yggdroot/indentLine'
+    " Plug 'Yggdroot/indentLine'
+    Plug 'lukas-reineke/indent-blankline.nvim'
 
     " === Syntax Highlighting === "
 
@@ -122,6 +123,7 @@ else
     "------------------------------------------------------------
     " 使用者操作介面
 
+    Plug 'glepnir/dashboard-nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

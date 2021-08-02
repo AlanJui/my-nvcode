@@ -45,6 +45,25 @@ else
     " ，置放在目錄路徑： ~/.config/nvim/after/plugin/ 處。
     " source ~/.config/my-nvim/config/fzf.vim
 
+    " Theme Colors
+    " source ~/.config/my-nvim/config/color-theme-ccc.vim
+    if exists("&termguicolors") && exists("&winblend")
+      syntax enable
+      set termguicolors
+      set winblend=0
+      set wildoptions=pum
+      set pumblend=5
+      set background=dark
+      " Use NeoSolarized
+      let g:neosolarized_termtrans=1
+      " runtime ./colors/NeoSolarized.vim
+      " colorscheme NeoSolarized
+      colorscheme solarized8
+    else
+      set background=dark
+      colorscheme gruvbox
+    endif
+
     "==========================================================
     " COC-NVIM 設定
     "==========================================================
@@ -53,6 +72,7 @@ else
     "==========================================================
     " 載入 Lua 設定檔
     "==========================================================
+    " lua vim.cmd("let g:indent_blankline_filetype_exclude = ['dashboard']")
     execute "lua require('config')"
 
     "===========================================================
@@ -74,25 +94,6 @@ else
     " 使用者操作介面設定
     "==========================================================
     source ~/.config/my-nvim/config/UI.vim
-
-    " Theme Colors
-    " source ~/.config/my-nvim/config/color-theme-ccc.vim
-    if exists("&termguicolors") && exists("&winblend")
-      syntax enable
-      set termguicolors
-      set winblend=0
-      set wildoptions=pum
-      set pumblend=5
-      set background=dark
-      " Use NeoSolarized
-      let g:neosolarized_termtrans=1
-      " runtime ./colors/NeoSolarized.vim
-      " colorscheme NeoSolarized
-      colorscheme solarized8
-    else
-      set background=dark
-      colorscheme gruvbox
-    endif
 
     " Status line
     " runtime ~/.config/my-nvim/after/plugin/statusline.luv

@@ -1,6 +1,3 @@
--- load plugins
-require('plugins.statusline')
-
 -- configure plugin: lspsaga
 require('lsp.lspsaga')
 
@@ -9,3 +6,9 @@ require('lsp.lua-ls')
 
 -- setup TypeScript Language Server
 require('lsp.typescript-ls')
+
+-- load plugins
+require('plugins.nvim-treesitter')
+require('plugins.dashboard-nvim')
+require('plugins.statusline')
+require('plugins.indent-blankline')
