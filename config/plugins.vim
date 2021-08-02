@@ -67,7 +67,8 @@ else
     Plug 'terryma/vim-multiple-cursors'
 
     " Comment code
-    Plug 'scrooloose/nerdcommenter'
+    "Plug 'scrooloose/nerdcommenter'
+    Plug 'terrortylor/nvim-comment'
 
     " Print function signatures in echo area
     Plug 'Shougo/echodoc.vim'

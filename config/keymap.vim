@@ -7,6 +7,8 @@ nmap <C-r><C-r> :source ~/.config/nvim/init.vim<CR>
 " 設定〔行號〕顯示模式
 nmap <C-l><C-l> :set rnu!<CR>
 
+" 設為註釋
+nmap <C-\> :CommentToggle<CR>
 
 "======================================================================
 " 快速鍵設定
