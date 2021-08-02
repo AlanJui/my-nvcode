@@ -53,7 +53,7 @@ let g:which_key_map['f'] = [ ':Ranger'                                          
 let g:which_key_map['h'] = [ '<C-W>s'                                           , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                     , 'no highlight' ]
 let g:which_key_map['o'] = [ ':Telescope buffers'                               , 'switch open files' ]
-let g:which_key_map['p'] = [ ':Telescope files'                                 , 'search files' ]
+let g:which_key_map['p'] = [ ':Telescope find_files'                            , 'search files' ]
 let g:which_key_map['g'] = [ ':Telescope live_grep'                             , 'search live grep' ]
 let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                          , 'quickfix' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                  , 'undo tree']
