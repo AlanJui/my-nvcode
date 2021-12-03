@@ -20,12 +20,9 @@ vim.g.strip_whitespace_on_save = 1
 
 
 -- autocmd FileType <desired_filetypes> EnableStripWhitespaceOnSave
--- vim.api.nvim_exec(
---   [[
---     autocmd FileType dashboard DisableWhitespace
---   ]],
---   false
--- )
+vim.cmd([[
+    autocmd FileType python EnableStripWhitespaceOnSave
+]])
 
 -- Disable white spacing highlights.
 -- let g:better_whitespace_filetypes_blacklist=[ '<filetype1>', '<filetype2>', '<etc>' ]
@@ -33,7 +30,7 @@ vim.g.strip_whitespace_on_save = 1
 --   let g:better_whitespace_filetypes_blacklist = ['diff', 'gitcommit', 'qf', 'help', 'markdown', 'dashboard']
 -- ]]
 vim.g.better_whitespace_filetypes_blacklist = {
-  'dashboard', 'packer'
+    'dashboard', 'packer', 'diff', 'gitcommit', 'unite', 'qf', 'help', 'markdown', 'fugitive'
 }
 
 -- Don't ask for confirmation before whitespace is stripped when you save the
