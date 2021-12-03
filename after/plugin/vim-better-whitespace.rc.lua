@@ -20,12 +20,12 @@ vim.g.strip_whitespace_on_save = 1
 
 
 -- autocmd FileType <desired_filetypes> EnableStripWhitespaceOnSave
-vim.api.nvim_exec(
-  [[
-    autocmd FileType dashboard DisableWhitespace
-  ]],
-  false
-)
+-- vim.api.nvim_exec(
+--   [[
+--     autocmd FileType dashboard DisableWhitespace
+--   ]],
+--   false
+-- )
 
 -- Disable white spacing highlights.
 -- let g:better_whitespace_filetypes_blacklist=[ '<filetype1>', '<filetype2>', '<etc>' ]

@@ -31,22 +31,22 @@ endfunction
 
 if exists('g:vscode')
     " VSCode extension
-    source ~/.config/my-nvim/config/format.vim
-    source ~/.config/my-nvim/config/keymap.vim
+    source ~/.config/coc-nvim/config/format.vim
+    source ~/.config/coc-nvim/config/keymap.vim
     runtime 'vscode.vim'
 else
     " Neovim Plugins
 
     " 需安裝之擴充套件
-    source ~/.config/my-nvim/config/plugins.vim
+    source ~/.config/coc-nvim/config/plugins.vim
 
     " 擴充套件設定（Configuration of Plugins)
     " 除了使用以下 souerce 指令載入設定外，亦可將各 Plugin 的設定檔 (.vim/.lua)
     " ，置放在目錄路徑： ~/.config/nvim/after/plugin/ 處。
-    " source ~/.config/my-nvim/config/fzf.vim
+    " source ~/.config/coc-nvim/config/fzf.vim
 
     " Theme Colors
-    " source ~/.config/my-nvim/config/color-theme-ccc.vim
+    " source ~/.config/coc-nvim/config/color-theme-ccc.vim
     if exists("&termguicolors") && exists("&winblend")
       syntax enable
       set termguicolors
@@ -67,7 +67,7 @@ else
     "==========================================================
     " COC-NVIM 設定
     "==========================================================
-    source ~/.config/my-nvim/coc-nvim.vim
+    source ~/.config/coc-nvim/coc-nvim.vim
 
     "==========================================================
     " 載入 Lua 設定檔
@@ -78,38 +78,38 @@ else
     "===========================================================
     " Vim 通用設定
     "===========================================================
-    source ~/.config/my-nvim/config/global.vim
+    source ~/.config/coc-nvim/config/global.vim
 
     "==========================================================
     " 程式碼版面與格式設定
     "==========================================================
-    source ~/.config/my-nvim/config/format.vim
+    source ~/.config/coc-nvim/config/format.vim
 
     "==========================================================
     " 快速鍵設定
     "==========================================================
-    source ~/.config/my-nvim/config/keymap.vim
+    source ~/.config/coc-nvim/config/keymap.vim
 
     "==========================================================
     " 使用者操作介面設定
     "==========================================================
-    source ~/.config/my-nvim/config/UI.vim
+    source ~/.config/coc-nvim/config/UI.vim
 
     " Status line
-    " runtime ~/.config/my-nvim/after/plugin/statusline.luv
-    " source ~/.config/my-nvim/after/plugin/airline-theme.vim
-    " luafile ~/.config/my-nvim/lua/plugins/galaxyline/init.lua
+    " runtime ~/.config/coc-nvim/after/plugin/statusline.luv
+    " source ~/.config/coc-nvim/after/plugin/airline-theme.vim
+    " luafile ~/.config/coc-nvim/lua/plugins/galaxyline/init.lua
 
     "==========================================================
     " 其它設定
     "==========================================================
-    source ~/.config/my-nvim/config/Misc.vim
+    source ~/.config/coc-nvim/config/Misc.vim
 
     if has("unix")
       let s:uname = system("uname -s")
       " Do Mac stuff
       if s:uname == "Darwin\n"
-        source ~/.config/my-nvim/config/clipboard-osx.vim
+        source ~/.config/coc-nvim/config/clipboard-osx.vim
       endif
     endif
 

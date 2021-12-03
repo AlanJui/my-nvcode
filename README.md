@@ -1,1 +1,1 @@
-# my-nvim
+# coc-nvim

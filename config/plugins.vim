@@ -11,8 +11,8 @@ autocmd VimEnter *
 
 
 " check whether vim-plug is installed and install it if necessary
-if empty(glob('~/.config/my-nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/my-nvim/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/coc-nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/coc-nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
@@ -23,7 +23,7 @@ endif
 "============================================================
 
 
-call plug#begin('~/.config/my-nvim/plugged')
+call plug#begin('~/.config/coc-nvim/plugged')
 
 " To conditionally activate plugins, vim-plug has a few solutions. For example,
 " using the Cond helper, you can conditionally activate installed plugins
