@@ -14,7 +14,7 @@ let g:mapleader = ","
 au FocusGained,BufEnter * :silent! checktime
 au FocusLost,WinLeave * :silent! w
 
-let g:python3_host_prog = expand("$HOME/.pyenv/versions/3.9.1/bin/python3.9")
+let g:python3_host_prog = expand("$HOME/.pyenv/versions/venv-nvim/bin/python3")
 let g:node_host_prog = expand("$HOME/n/bin/neovim-node-host")
 
 let g:loaded_python_provider = 0
@@ -45,25 +45,6 @@ else
     " ，置放在目錄路徑： ~/.config/nvim/after/plugin/ 處。
     " source ~/.config/coc-nvim/config/fzf.vim
 
-    " Theme Colors
-    " source ~/.config/coc-nvim/config/color-theme-ccc.vim
-    if exists("&termguicolors") && exists("&winblend")
-      syntax enable
-      set termguicolors
-      set winblend=0
-      set wildoptions=pum
-      set pumblend=5
-      set background=dark
-      " Use NeoSolarized
-      let g:neosolarized_termtrans=1
-      " runtime ./colors/NeoSolarized.vim
-      " colorscheme NeoSolarized
-      colorscheme solarized8
-    else
-      set background=dark
-      colorscheme gruvbox
-    endif
-
     "==========================================================
     " COC-NVIM 設定
     "==========================================================
@@ -93,9 +74,29 @@ else
     "==========================================================
     " 使用者操作介面設定
     "==========================================================
+    " Theme Colors
+    " source ~/.config/coc-nvim/config/color-theme-ccc.vim
+    if exists("&termguicolors") && exists("&winblend")
+      syntax enable
+      set termguicolors
+      set winblend=0
+      set wildoptions=pum
+      set pumblend=5
+      set background=dark
+      " Use NeoSolarized
+      let g:neosolarized_termtrans=1
+      " runtime ./colors/NeoSolarized.vim
+      " colorscheme NeoSolarized
+      colorscheme solarized8
+    else
+      set background=dark
+      colorscheme gruvbox
+    endif
+
     source ~/.config/coc-nvim/config/UI.vim
 
     " Status line
+    execute "lua require('plugins.statusline')"
     " runtime ~/.config/coc-nvim/after/plugin/statusline.luv
     " source ~/.config/coc-nvim/after/plugin/airline-theme.vim
     " luafile ~/.config/coc-nvim/lua/plugins/galaxyline/init.lua

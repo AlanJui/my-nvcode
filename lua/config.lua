@@ -10,7 +10,7 @@ require('lsp.typescript-ls')
 -- load plugins
 require('plugins.nvim-treesitter')
 require('plugins.dashboard-nvim')
-require('plugins.statusline')
 require('plugins.telescope')
 require('plugins.indent-blankline')
 require('plugins.nvim_comment')
+-- require('plugins.statusline')
