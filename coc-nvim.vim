@@ -27,8 +27,8 @@ let g:coc_global_extensions = [
 \ 'coc-yank',
 \ 'coc-pyright',
 \ 'coc-tsserver',
+\ 'coc-explorer',
 \ ]
-" \ 'coc-explorer',
 " \ 'coc-python',
 
 

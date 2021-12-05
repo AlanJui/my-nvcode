@@ -31,24 +31,24 @@ endfunction
 
 if exists('g:vscode')
     " VSCode extension
-    source ~/.config/coc-nvim/config/format.vim
-    source ~/.config/coc-nvim/config/keymap.vim
+    source ~/.config/nvim/config/format.vim
+    source ~/.config/nvim/config/keymap.vim
     runtime 'vscode.vim'
 else
     " Neovim Plugins
 
     " 需安裝之擴充套件
-    source ~/.config/coc-nvim/config/plugins.vim
+    source ~/.config/nvim/config/plugins.vim
 
     " 擴充套件設定（Configuration of Plugins)
     " 除了使用以下 souerce 指令載入設定外，亦可將各 Plugin 的設定檔 (.vim/.lua)
     " ，置放在目錄路徑： ~/.config/nvim/after/plugin/ 處。
-    " source ~/.config/coc-nvim/config/fzf.vim
+    " source ~/.config/nvim/config/fzf.vim
 
     "==========================================================
     " COC-NVIM 設定
     "==========================================================
-    source ~/.config/coc-nvim/coc-nvim.vim
+    source ~/.config/nvim/coc-nvim.vim
 
     "==========================================================
     " 載入 Lua 設定檔
@@ -59,23 +59,23 @@ else
     "===========================================================
     " Vim 通用設定
     "===========================================================
-    source ~/.config/coc-nvim/config/global.vim
+    source ~/.config/nvim/config/global.vim
 
     "==========================================================
     " 程式碼版面與格式設定
     "==========================================================
-    source ~/.config/coc-nvim/config/format.vim
+    source ~/.config/nvim/config/format.vim
 
     "==========================================================
     " 快速鍵設定
     "==========================================================
-    source ~/.config/coc-nvim/config/keymap.vim
+    source ~/.config/nvim/config/keymap.vim
 
     "==========================================================
     " 使用者操作介面設定
     "==========================================================
     " Theme Colors
-    " source ~/.config/coc-nvim/config/color-theme-ccc.vim
+    " source ~/.config/nvim/config/color-theme-ccc.vim
     if exists("&termguicolors") && exists("&winblend")
       syntax enable
       set termguicolors
@@ -93,24 +93,24 @@ else
       colorscheme gruvbox
     endif
 
-    source ~/.config/coc-nvim/config/UI.vim
+    source ~/.config/nvim/config/UI.vim
 
     " Status line
     execute "lua require('plugins.statusline')"
-    " runtime ~/.config/coc-nvim/after/plugin/statusline.luv
-    " source ~/.config/coc-nvim/after/plugin/airline-theme.vim
-    " luafile ~/.config/coc-nvim/lua/plugins/galaxyline/init.lua
+    " runtime ~/.config/nvim/after/plugin/statusline.luv
+    " source ~/.config/nvim/after/plugin/airline-theme.vim
+    " luafile ~/.config/nvim/lua/plugins/galaxyline/init.lua
 
     "==========================================================
     " 其它設定
     "==========================================================
-    source ~/.config/coc-nvim/config/Misc.vim
+    source ~/.config/nvim/config/Misc.vim
 
     if has("unix")
       let s:uname = system("uname -s")
       " Do Mac stuff
       if s:uname == "Darwin\n"
-        source ~/.config/coc-nvim/config/clipboard-osx.vim
+        source ~/.config/nvim/config/clipboard-osx.vim
       endif
     endif
 
